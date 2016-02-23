@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="friendMachine">
 <head>
   <title>Angular Friends</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
+<body ng-controller="friendCtrl">
 
   <h1>The <strong>facebook</strong> Friend Machine</h1>
-
   <div class="friends">
     <form class="form-inline searchForm" role="form">
       <div class="form-group">
@@ -53,6 +52,27 @@
 
         <div class="num-friends">
           Friends: 1,367
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <ul ng-repeat="friend in friends">
+      <li class='friend'>
+        <img class="profile-pic" src={{friend.pic_square}}>
+
+        <h3>{{friend.name}}</h3>
+
+        <div class="location">
+          Location: {{friend.current_location.city}}, {{friend.current_location.state}}, {{friend.current_location.country}}
+        </div>
+
+        <div class="status">
+          Status: {{ friend.status.message }} <span class="hashtag">#ihateprovo</span>
+        </div>
+
+        <div class="num-friends">
+          Friends: {{ friend.friend_count }}
         </div>
       </li>
     </ul>
