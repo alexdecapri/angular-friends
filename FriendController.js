@@ -2,7 +2,6 @@ var app = angular.module("friendMachine");
 
 app.controller("friendCtrl", function($scope) {
 
-
 	// $scope.test = "Hello World";
 
 	$scope.friends = [
