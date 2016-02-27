@@ -32,11 +32,11 @@ app.controller("friendCtrl", function($scope) {
 
 	$scope.sortOptions = [{
 		display: "Ascending",
-		value: true
+		value: false
 		},
 		{
 		display: "Descending",
-		value: false
+		value: true
 		}
 	];
 
