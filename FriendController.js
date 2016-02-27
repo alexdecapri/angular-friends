@@ -4,6 +4,16 @@ app.controller("friendCtrl", function($scope) {
 
 	// $scope.test = "Hello World";
 
+	$scope.sortOptions = [{
+		display: "Ascending",
+		value: ""
+		},
+		{
+		display: "Descending",
+		value: ""
+		}
+	];
+
 	$scope.friends = [
 	  {
 	    "name": "Preston McNeil",
@@ -439,7 +449,3 @@ app.controller("friendCtrl", function($scope) {
 
 
 });
-
-
-
-
