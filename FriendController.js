@@ -4,13 +4,39 @@ app.controller("friendCtrl", function($scope) {
 
 	// $scope.test = "Hello World";
 
+	$scope.logger = function() {
+		console.log($scope.sortField);
+	}
+
+	$scope.sortProps = [{
+		display: "Name",
+		value: "name"
+		},
+		{
+		display: "#Friends",
+		value: "friend_count"
+		},
+		{
+		display: "City",
+		value: "current_location.city"
+		},
+		{
+		display: "State",
+		value: "current_location.state"
+		},
+		{
+		display: "Country",
+		value: "current_location.country"
+		}
+		];
+
 	$scope.sortOptions = [{
 		display: "Ascending",
-		value: ""
+		value: true
 		},
 		{
 		display: "Descending",
-		value: ""
+		value: false
 		}
 	];
 
